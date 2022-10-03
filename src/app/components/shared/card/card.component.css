@@ -1,0 +1,62 @@
+.container{
+    margin-top: 310px;
+    margin-left: 90px;
+    margin-right: 50px;
+
+    
+    
+}
+.card{
+    margin-left: 6px;
+    margin-bottom: 6px;
+    height: 480px;
+    background: rgba(32, 40, 62, 0.8);
+    backdrop-filter: blur(40px);
+    border-radius: 12px;
+}
+.card_image{
+    position: absolute;
+    margin-left: 9px;
+    margin-top: 9px;
+    border-radius: 8px;
+
+}
+.card-deck{
+    width: 1224px;
+    height: 460px;
+    backdrop-filter: blur(40px);
+}
+.texto{
+    width: 200px;
+    height: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #EBEEF5;
+    margin-top: 430px;
+    margin-left: 16px;
+}
+
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 4px;
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    left: 16px;
+    top: 18px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 4px 8px 4px 8px;
+    z-index: 100;
+    color: #FFAD49;
+
+}
