@@ -5,10 +5,10 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './components/layout/layout.module';
 import { RoutesModule } from './components/routes/routes.module';
 import { SharedModule } from './components/shared/shared.module';
-import { InicioComponent } from './inicio/inicio.component';
-import { SeriesComponent } from './series/series.component';
-import { PeliculasComponent } from './peliculas/peliculas.component';
-import { IngresarComponent } from './ingresar/ingresar.component';
+import { InicioComponent } from './components/routes/inicio/inicio.component';
+import { SeriesComponent } from './components/routes/series/series.component';
+import { PeliculasComponent } from './components/routes/peliculas/peliculas.component';
+import { IngresarComponent } from './components/routes/ingresar/ingresar.component';
 
 
 

@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes,RouterModule } from '@angular/router';
-import { IngresarComponent } from './ingresar/ingresar.component';
-import { HeaderComponent } from './components/layout/header/header.component';
-import { PeliculasComponent } from './peliculas/peliculas.component';
-import { SeriesComponent } from './series/series.component';
-import { CardComponent } from './components/shared/card/card.component';
-import { InicioComponent } from './inicio/inicio.component';
+import { IngresarComponent } from './components/routes/ingresar/ingresar.component';
+import { PeliculasComponent } from './components/routes/peliculas/peliculas.component';
+import { SeriesComponent } from './components/routes/series/series.component';
+import { InicioComponent } from './components/routes/inicio/inicio.component';
 
 
 const routes: Routes = [
