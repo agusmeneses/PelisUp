@@ -9,6 +9,8 @@ import { InicioComponent } from './components/routes/inicio/inicio.component';
 import { SeriesComponent } from './components/routes/series/series.component';
 import { PeliculasComponent } from './components/routes/peliculas/peliculas.component';
 import { IngresarComponent } from './components/routes/ingresar/ingresar.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -27,6 +29,7 @@ import { IngresarComponent } from './components/routes/ingresar/ingresar.compone
     LayoutModule,
     RoutesModule,
     SharedModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
