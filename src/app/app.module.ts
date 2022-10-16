@@ -10,6 +10,7 @@ import { SeriesComponent } from './components/routes/series/series.component';
 import { PeliculasComponent } from './components/routes/peliculas/peliculas.component';
 import { IngresarComponent } from './components/routes/ingresar/ingresar.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     LayoutModule,
     RoutesModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

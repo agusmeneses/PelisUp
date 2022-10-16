@@ -1,47 +1,40 @@
 <app-titulo></app-titulo>
-
+ 
 <div class="input-group rounded">
     <img class="bg-image" width="35" height="35" src="assets/search-normal.svg">
-    <input type="text" class="form-control" placeholder="Buscar por series y peliculas" name="filter" [(ngModel)]="filter">
+    <input type="text" class="form-control" placeholder="Buscar por series y peliculas" [(ngModel)]="toSearch" (ngModelChange)="search($event)">
 </div>
   <div class="box">
-    <button class="opcion" [ngClass]="status ? 'active' : 'danger'" (click)="todos_filter()"> 
+    <button class="opcion" [ngClass]="filter == 'Todos' ? 'active' : 'danger'" (click)="changeFilter('Todos')">
       Todos
     </button>
-    <button class="opcion" [ngClass]="status1 ? 'active' : 'danger'" (click)="peliculas_filter()">
+    <button class="opcion" [ngClass]="filter == 'movie' ? 'active' : 'danger'" (click)="changeFilter('movie')">
       Peliculas
     </button>
-    <button class="opcion" [ngClass]="status2 ? 'active' : 'danger'" (click)="series_filter()">
+    <button class="opcion" [ngClass]="filter == 'tv' ? 'active' : 'danger'" (click)="changeFilter('tv')">
       Series
     </button>
   </div>
-
-
+ 
+ 
 <p>Todos<span>(120)</span></p>
-
-
+ 
+ 
 <div class="container">    
     <div class="row">
-        <div *ngFor="let movie of filteredmovies" class="col-md-3 mx-auto my-3">
-            <div *ngIf="movie.title?.toLowerCase()?.includes(filter.toLowerCase()) || movie.name?.toLowerCase()?.includes(filter.toLowerCase())">
-                <div class="card">
-                    
-                    <div class="rating">
-                    <img width="13.5" height="13.5" src="assets/star.png" alt="">
-                    {{movie.vote_average|number:"1.1-1"}}
-                    </div>
-                    <img src="assets\portadas\img1.png" class="card_image" height="400" width="266">
-                    <div *ngIf="movie.title" class="texto">{{movie.title}}</div>
-                    <div *ngIf="movie.name" class="texto">{{movie.name}}</div>
+        <ng-container *ngFor="let movie of movieSeriesRow">
+          <div *ngIf="filter == movie.media_type || filter== 'Todos'" class="card" style="width:18rem;">
 
-                <div>
-            </div>
+              <div class="rating">
+                <img width="13.5" height="13.5" src="assets/star.png" alt="">
+                {{movie.vote_average|number:"1.1-1"}}
+              </div>
 
-        </div>
-        
-    </div>
+              <img src="{{ urlImage + movie.poster_path}}" class="card_image" height="400" width="266">
+              <div *ngIf="movie.title" class="texto">{{movie.title}}</div>
+              <div *ngIf="movie.name" class="texto">{{movie.name}}</div>
+          </div>
+        </ng-container>
+      </div>
+  
 </div>
-
-
-
-
