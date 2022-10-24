@@ -1,1 +1,14 @@
-<p>ingresar works!</p>
+<form [formGroup]="Form">
+    <input type="text" placeholder="User" formControlName="username">
+    <input type="text" placeholder="Password" formControlName="password">
+</form>
+
+<div class="flex">
+    <button (click)="login">Login</button>
+    <button (click)="register">register</button>
+    <button (click)="loginGoogle">loginGoogle</button>
+    <button (click)="showUserData">showUserData</button>
+</div>
+
+<h1>{{userData}}</h1>
+

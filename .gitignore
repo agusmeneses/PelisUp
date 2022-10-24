@@ -49,3 +49,8 @@ Thumbs.db
 *.mov
 *.wmv
 
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
