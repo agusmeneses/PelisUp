@@ -67,28 +67,33 @@ h4{
     flex-grow: 1;
 }
 .form-control{
-    background: rgba(0, 0, 0, 0.1);
-    border: none
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    color: #EBEEF5;
 }
-.contador{
-    position: absolute;
-    width: 74px;
-    height: 24px;
+p{
+    
+    width: 142px;
+    height: 40px;
     left: 120px;
-    top: 376px;
-
-    /* Body/Regular */
-
+    top: 552px;
+    color: #767E94;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 400;
     font-size: 16px;
+    font-weight: 400;
     line-height: 24px;
-    /* identical to box height, or 150% */
-
-
-    /* Grey/400 */
-
-    color: #767E94;
+    margin-top: 54px;
+    margin-left: 120px;
+}
+span{
+  
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
 
 }
+

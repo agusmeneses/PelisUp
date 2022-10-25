@@ -4,23 +4,24 @@
     <img class="bg-image" width="35" height="35" src="assets/search-normal.svg">
     <input type="text" class="form-control" placeholder="Buscar por series y peliculas" [(ngModel)]="toSearch" (ngModelChange)="search($event)">
 </div>
-  <div class="box">
-    <button class="opcion" [ngClass]="filter == 'Todos' ? 'active' : 'danger'" (click)="all(1)">
-      Todos
-    </button>
-    <button class="opcion" [ngClass]="filter == 'movie' ? 'active' : 'danger'" (click)="movies(1)">
-      Peliculas
-    </button>
-    <button class="opcion" [ngClass]="filter == 'tv' ? 'active' : 'danger'" (click)="series(1)">
-      Series
-    </button>
-  </div>
+
+<div class="box">
+  <button class="opcion" [ngClass]="filter == 'Todos' ? 'active' : 'danger'" (click)="all(1)">
+    Todos
+  </button>
+  <button class="opcion" [ngClass]="filter == 'movie' ? 'active' : 'danger'" (click)="movies(1)">
+    Peliculas
+  </button>
+  <button class="opcion" [ngClass]="filter == 'tv' ? 'active' : 'danger'" (click)="series(1)">
+    Series
+  </button>
+</div>
  
  
 <p>{{actual}}<span>({{cant}})</span></p>
  
  
-<app-card [filter]="filter" [movieSeriesRow]="movieSeriesRow"></app-card>
+<app-card class="cartas" [filter]="filter" [movieSeriesRow]="movieSeriesRow"></app-card>
 
 
         

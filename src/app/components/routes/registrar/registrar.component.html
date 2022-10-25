@@ -2,7 +2,7 @@
 
 <div class="box">
 
-    <h1 class="titulo">Ingresar</h1>
+    <h1 class="titulo">Registrarse</h1>
 
     <form [formGroup]="Form" class="formulario">
 
@@ -18,18 +18,13 @@
 
     </form>
 
-    <p>No tienes cuenta? <a class="nav-link" routerLink="/registrar" routerLinkActive="active" href="/registrar">Registrarse</a></p>
+    <p>Ya tienes cuenta? <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="/ingresar">Ingresar</a></p>
 
     <div class="login">
-        <button class="boton1" (click)="login()">Login</button>
+        <button class="boton1" (click)="register()">Registrar</button>
     </div>
 
-    <div class="separador">
-        <img class="linea1" src="assets/linea.png" alt=""><h3>ó</h3><img class="linea1" src="assets/linea.png" alt="">
-    </div>
 
-    <div class="logingoogle">
-        <button class="transparent"><img (click)="loginGoogle()" src="assets/Google.png" alt="" width="303px" height="69px"></button>
-    </div>
     
+
 </div>

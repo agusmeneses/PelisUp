@@ -2,14 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import {AuthService} from '../../../services/auth.service'
 
-
 @Component({
-  selector: 'app-ingresar',
-  templateUrl: './ingresar.component.html',
-  styleUrls: ['./ingresar.component.css'],
+  selector: 'app-registrar',
+  templateUrl: './registrar.component.html',
+  styleUrls: ['./registrar.component.css']
 })
-export class IngresarComponent implements OnInit {
-
+export class RegistrarComponent implements OnInit {
 
   Form = new FormGroup({
     username: new FormControl(''),
@@ -21,26 +19,6 @@ export class IngresarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
-    this.authService.login(
-      this.Form.get('username')?.value || '',
-      this.Form.get('password')?.value || '',
-    ).then(
-      response => {
-        localStorage.setItem('Usuario', JSON.stringify(response))
-      }
-    )
-  }
-
-  loginGoogle(){
-    this.authService.loginWithGoogle().then(
-      response => {
-        console.log(response);
-        localStorage.setItem('Usuario', JSON.stringify(response))
-      }
-    )
-  }
-
   register(): void{
     this.authService.register(
       this.Form.get('username')?.value || '',
@@ -48,6 +26,7 @@ export class IngresarComponent implements OnInit {
     ).then(
       response => {
         console.log('Registered | ',response);
+        localStorage.setItem('Usuario Registrado', JSON.stringify(response))
       }
     )
   }
@@ -68,3 +47,4 @@ export class IngresarComponent implements OnInit {
 
 
 }
+

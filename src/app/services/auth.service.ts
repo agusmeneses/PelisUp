@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { IngresarComponent } from "../components/routes/ingresar/ingresar.component";
+
 import {AngularFireAuth} from '@angular/fire/compat/auth';
 import firebase from '@firebase/app-compat'
 //npm i @angular/fire

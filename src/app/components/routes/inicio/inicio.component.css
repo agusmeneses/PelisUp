@@ -63,13 +63,12 @@ h4{
     display: flex;
     flex-direction: row;
     padding: 8px;
-    position: absolute;
     width: 386px;
     height: 56px;
     left: 120px;
     top: 450px;
-    margin-top: 141px;
-    margin-left: auto;
+    margin-top: 80px;
+    margin-left: 120px;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(40px);
     border-radius: 12px;
@@ -119,7 +118,7 @@ h4{
     }
 
 p{
-    position: absolute;
+    
     width: 142px;
     height: 40px;
     left: 120px;
@@ -130,8 +129,8 @@ p{
     font-weight: 600;
     font-size: 32px;
     line-height: 40px;
-    margin-top: 160px;
-    margin-left: auto;
+    margin-top: 24px;
+    margin-left: 120px;
 }
 span{
   

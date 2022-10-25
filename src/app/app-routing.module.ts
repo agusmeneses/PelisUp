@@ -5,6 +5,7 @@ import { PeliculasComponent } from './components/routes/peliculas/peliculas.comp
 import { SeriesComponent } from './components/routes/series/series.component';
 import { InicioComponent } from './components/routes/inicio/inicio.component';
 import { ErrorComponent } from './components/routes/error/error.component';
+import { RegistrarComponent } from './components/routes/registrar/registrar.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,9 @@ const routes: Routes = [
   },
   {
     path: 'ingresar',component: IngresarComponent,
+  },
+  {
+    path:'registrar', component: RegistrarComponent,
   },
   {
     path: '',component: InicioComponent,
