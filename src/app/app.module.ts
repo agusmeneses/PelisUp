@@ -17,6 +17,8 @@ import { environment } from 'src/environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AuthService } from './services/auth.service';
 import { RegistrarComponent } from './components/routes/registrar/registrar.component';
+import { TvdetalilsComponent } from './components/routes/tvdetalils/tvdetalils.component';
+import { MoviedetailsComponent } from './components/routes/moviedetails/moviedetails.component';
 
 
 
@@ -28,7 +30,9 @@ import { RegistrarComponent } from './components/routes/registrar/registrar.comp
     SeriesComponent,
     PeliculasComponent,
     IngresarComponent,
-    RegistrarComponent
+    RegistrarComponent,
+    TvdetalilsComponent,
+    MoviedetailsComponent
     
   ],
   imports: [

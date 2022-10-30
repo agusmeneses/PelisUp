@@ -19,3 +19,7 @@ export interface IMovie {
     first_air_date?:   string;
     origin_country?:   string[];
 }
+
+export interface IMovieUser extends IMovie{
+    idUser: string;
+}

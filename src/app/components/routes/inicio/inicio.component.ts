@@ -101,7 +101,6 @@ export class InicioComponent implements OnInit {
       }  
     )
   }
-
   series(arg:any){
     this.filter="tv"
     this.actual="Series"

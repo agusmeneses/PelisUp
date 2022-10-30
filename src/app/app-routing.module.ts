@@ -6,6 +6,8 @@ import { SeriesComponent } from './components/routes/series/series.component';
 import { InicioComponent } from './components/routes/inicio/inicio.component';
 import { ErrorComponent } from './components/routes/error/error.component';
 import { RegistrarComponent } from './components/routes/registrar/registrar.component';
+import { TvdetalilsComponent } from './components/routes/tvdetalils/tvdetalils.component';
+import { MoviedetailsComponent } from './components/routes/moviedetails/moviedetails.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,12 @@ const routes: Routes = [
   },
   {
     path:'registrar', component: RegistrarComponent,
+  },
+  {
+    path:'tvdetail/:id', component: TvdetalilsComponent,
+  },
+  {
+    path:'moviedetail/:id', component: MoviedetailsComponent,
   },
   {
     path: '',component: InicioComponent,

@@ -27,7 +27,11 @@ export class IngresarComponent implements OnInit {
       this.Form.get('password')?.value || '',
     ).then(
       response => {
+        console.log(response);
         localStorage.setItem('Usuario', JSON.stringify(response))
+      },
+      error => {
+        console.log(error);
       }
     )
   }

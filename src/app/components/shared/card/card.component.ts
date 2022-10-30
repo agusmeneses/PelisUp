@@ -19,14 +19,27 @@ export class CardComponent implements OnInit {
   urlImage: string= 'https://image.tmdb.org/t/p/w500';
   @Input() filter: string | undefined;
   @Input() movieSeriesRow: any | undefined
+  id: string=''
 
-  
    
-  constructor() { }
+  constructor(public _moviesService: MoviesService) { }
  
   ngOnInit(): void {
     
   }
 
+  detail(movie:any){
+    this.id=movie.id
+    if (movie.name){
+      console.log("Es tv")
+        window.location.href="/tvdetail/"+movie.id;
+        
+      } else{
+      console.log("Es movie")
+        window.location.href="/moviedetail/"+movie.id;
+        
+      }
+    }
+  }
 
-}
+

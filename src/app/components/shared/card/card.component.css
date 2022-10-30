@@ -36,11 +36,11 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 16px;
     letter-spacing: 0.02em;
     color: #EBEEF5;
     margin-top: 425px;
-    margin-left: 16px;
+    margin-left: 5px;
 }
 
 
@@ -61,5 +61,11 @@
     padding: 4px 8px 4px 8px;
     z-index: 100;
     color: #FFAD49;
+
+}
+.footer{
+    
+    margin-top: 1400px;
+   
 
 }
