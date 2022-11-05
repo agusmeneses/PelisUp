@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { BaseLoginProvider } from 'angularx-social-login';
 import {AuthService} from '../../../services/auth.service'
+import { ActivatedRoute, Router, NavigationStart } from '@angular/router';
 
 
 @Component({
@@ -9,16 +11,31 @@ import {AuthService} from '../../../services/auth.service'
   styleUrls: ['./ingresar.component.css'],
 })
 export class IngresarComponent implements OnInit {
-
-
+  error: any
+  userlogged: boolean = false;
   Form = new FormGroup({
     username: new FormControl(''),
     password: new FormControl(''),
   });
-
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService,private router : Router) { }
 
   ngOnInit(): void {
+    this.userlogged=false
+    this.error=false
+    this.authService.getUserLogged().subscribe(
+      response => {
+        console.log(response);
+        if (response){
+          console.log("Esta logueado")
+          window.location.href="/dash/"
+        }else{
+          console.log("No esta logueado")
+        }
+      },
+      error => {
+        console.log(error);
+      }
+    )
   }
 
   login(){
@@ -29,10 +46,14 @@ export class IngresarComponent implements OnInit {
       response => {
         console.log(response);
         localStorage.setItem('Usuario', JSON.stringify(response))
+        if (response){
+          this.router.navigateByUrl('/dash');
+        }else{
+          console.log("Error")
+          this.error=true
+        }
       },
-      error => {
-        console.log(error);
-      }
+      
     )
   }
 
@@ -41,6 +62,12 @@ export class IngresarComponent implements OnInit {
       response => {
         console.log(response);
         localStorage.setItem('Usuario', JSON.stringify(response))
+        if (response){
+          this.router.navigateByUrl('/dash');
+        }else{
+          console.log("Error")
+          this.error=true
+        }
       }
     )
   }
@@ -58,7 +85,7 @@ export class IngresarComponent implements OnInit {
   showUserData(){
     this.authService.getUserLogged().subscribe(
       response => {
-        console.log('Registered | ',response);
+        console.log(response);
       },
       error => {
         console.log(error);
@@ -68,6 +95,11 @@ export class IngresarComponent implements OnInit {
 
   get userData(){
     return 'User: '+ this.Form.get('username')?.value +' | Password: ' + this.Form.get('password')?.value
+  }
+
+  logOut(){
+    this.authService.logout()
+    console.log("Logged out")
   }
 
 

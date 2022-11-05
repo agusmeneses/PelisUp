@@ -8,6 +8,8 @@ import { ErrorComponent } from './components/routes/error/error.component';
 import { RegistrarComponent } from './components/routes/registrar/registrar.component';
 import { TvdetalilsComponent } from './components/routes/tvdetalils/tvdetalils.component';
 import { MoviedetailsComponent } from './components/routes/moviedetails/moviedetails.component';
+import { DashboardComponent } from './components/routes/dashboard/dashboard.component';
+import { AgregarComponent } from './components/routes/agregar/agregar.component';
 
 
 const routes: Routes = [
@@ -31,6 +33,12 @@ const routes: Routes = [
   },
   {
     path:'moviedetail/:id', component: MoviedetailsComponent,
+  },
+  {
+    path:'dash', component: DashboardComponent, 
+  },
+  {
+    path: 'agregar', component: AgregarComponent,
   },
   {
     path: '',component: InicioComponent,

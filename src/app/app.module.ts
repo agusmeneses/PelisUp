@@ -19,6 +19,23 @@ import { AuthService } from './services/auth.service';
 import { RegistrarComponent } from './components/routes/registrar/registrar.component';
 import { TvdetalilsComponent } from './components/routes/tvdetalils/tvdetalils.component';
 import { MoviedetailsComponent } from './components/routes/moviedetails/moviedetails.component';
+import { DashboardComponent } from './components/routes/dashboard/dashboard.component';
+import { ErrorComponent } from './components/routes/error/error.component';
+import { AgregarComponent } from './components/routes/agregar/agregar.component';
+import { Pipe, PipeTransform } from '@angular/core';
+
+
+@Pipe({
+  name: 'firstWord'
+})
+export class FirstWordPipe implements PipeTransform {
+
+  transform(value: string): string {
+    if (!value) { return ''; }
+    return value.split(' ')[0];
+  }
+
+}
 
 
 
@@ -32,7 +49,10 @@ import { MoviedetailsComponent } from './components/routes/moviedetails/moviedet
     IngresarComponent,
     RegistrarComponent,
     TvdetalilsComponent,
-    MoviedetailsComponent
+    MoviedetailsComponent,
+    ErrorComponent,
+    DashboardComponent,
+    AgregarComponent
     
   ],
   imports: [
@@ -50,7 +70,7 @@ import { MoviedetailsComponent } from './components/routes/moviedetails/moviedet
     ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [IngresarComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

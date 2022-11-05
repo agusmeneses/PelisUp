@@ -20,8 +20,7 @@ export class CardComponent implements OnInit {
   @Input() filter: string | undefined;
   @Input() movieSeriesRow: any | undefined
   id: string=''
-
-   
+    
   constructor(public _moviesService: MoviesService) { }
  
   ngOnInit(): void {

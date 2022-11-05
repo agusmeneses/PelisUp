@@ -17,6 +17,20 @@ export class RegistrarComponent implements OnInit {
   constructor(public authService: AuthService) { }
 
   ngOnInit(): void {
+    this.authService.getUserLogged().subscribe(
+      response => {
+        console.log(response);
+        if (response){
+          console.log("Esta logueado")
+          window.location.href="/dash/"
+        }else{
+          console.log("No esta logueado")
+        }
+      },
+      error => {
+        console.log(error);
+      }
+    )
   }
 
   register(): void{
@@ -27,6 +41,8 @@ export class RegistrarComponent implements OnInit {
       response => {
         console.log('Registered | ',response);
         localStorage.setItem('Usuario Registrado', JSON.stringify(response))
+        if (response)
+          window.location.href="/ingresar/"
       }
     )
   }

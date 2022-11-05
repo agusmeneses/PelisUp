@@ -1,3 +1,4 @@
+<app-header></app-header>
 <img class="sally" src="..\..\..\..\assets\Saly-11.png" alt="">
 
 <div class="box">
@@ -16,6 +17,8 @@
             <input type="text" class="form-control" placeholder="Contraseña" formControlName="password">
         </div>
 
+        <div *ngIf="error" class="Error">Login Error, please try again</div>
+
     </form>
 
     <p>No tienes cuenta? <a class="nav-link" routerLink="/registrar" routerLinkActive="active" href="/registrar">Registrarse</a></p>
@@ -23,6 +26,7 @@
     <div class="login">
         <button class="boton1" (click)="login()">Login</button>
     </div>
+
 
     <div class="separador">
         <img class="linea1" src="assets/linea.png" alt=""><h3>ó</h3><img class="linea1" src="assets/linea.png" alt="">

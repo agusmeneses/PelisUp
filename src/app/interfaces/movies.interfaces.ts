@@ -18,6 +18,9 @@ export interface IMovie {
     original_name?:    string;
     first_air_date?:   string;
     origin_country?:   string[];
+    idUser?: string;
+    added?: boolean;
+    idGlobal?: string;
 }
 
 export interface IMovieUser extends IMovie{
