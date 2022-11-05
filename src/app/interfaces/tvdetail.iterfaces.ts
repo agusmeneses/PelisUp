@@ -3,7 +3,7 @@ export interface ITvdetail {
     backdrop_path: any
     belongs_to_collection: any
     budget: number
-    genres: Genre[]
+    genres: any
     last_episode_to_air?: Episode
     homepage: string
     id: number

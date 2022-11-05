@@ -109,6 +109,14 @@ export class DashboardComponent implements OnInit {
       );
   }
 
+  Ir_a_pelis(){
+    window.location.href="/mis-pelis/"
+  }
+
+  Ir_a_series(){
+    window.location.href="/mis-series/"
+  }
+
   
 
 }

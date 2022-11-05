@@ -8,8 +8,8 @@
 <img class="card" src="{{ urlImage + movie.poster_path}}" alt="">
 
 <div class="details">
-    <h1>{{movie.tagline.length < 40 ? '' : movie.original_name}} {{movie.tagline.length > 40 ? '' : movie.tagline}}</h1>
-    <h2>{{movie.overview || movie.tagline}}</h2>
+    <h1>{{movie.tagline == undefined ? '' : movie.original_name}} {{movie.tagline.length < 40 ? '' : movie.original_name}} {{movie.tagline.length > 40 ? '' : movie.tagline}}</h1>
+    <h2>{{movie.overview || movie.tagline}} {{movie.overview.length+movie.tagline.length > 1 ? '' : 'Vaya!, parece que esta serie no tiene descripción'}}</h2>
     <div class="rating">
         <img width="13.5" height="13.5" src="assets/star.png" alt="">
         {{movie.vote_average|number:"1.1-1"}}

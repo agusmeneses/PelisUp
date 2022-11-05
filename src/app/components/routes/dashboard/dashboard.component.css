@@ -71,6 +71,8 @@ color: #EBEEF5;
     
     padding: 40px 16px;
     gap: 8px;
+
+    border: none;
     
     width: 588px;
     height: 152px;
@@ -94,6 +96,8 @@ color: #EBEEF5;
     
     padding: 40px 16px;
     gap: 8px;
+
+    border: none;
     
     width: 588px;
     height: 152px;
@@ -110,7 +114,7 @@ color: #EBEEF5;
 h2{
 width: 39px;
 height: 40px;
-margin-left: 14px;
+margin-left: 0px;
 
 /* Heading/H3 */
 
@@ -140,7 +144,7 @@ flex-grow: 0;
 .arreglar{
     width: 39px;
     height: 40px;
-    margin-left: 45px;
+    margin-left: 10px;
     
     /* Heading/H3 */
     
@@ -212,3 +216,37 @@ margin-left: 0px;
     
     
     }
+
+    .spinner-border{
+        margin-left: 720px;
+        margin-top: 50px;
+        position: absolute;
+    }
+.Saludo{
+    position: absolute;
+    width: 800px;
+    margin-top: 160px;
+    margin-left: 120px;
+height: 128px;
+
+/* Body/Large */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 32px;
+/* or 160% */
+
+
+/* Grey/300 */
+
+color: #8E95A9;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}    

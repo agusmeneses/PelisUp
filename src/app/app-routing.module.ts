@@ -10,6 +10,8 @@ import { TvdetalilsComponent } from './components/routes/tvdetalils/tvdetalils.c
 import { MoviedetailsComponent } from './components/routes/moviedetails/moviedetails.component';
 import { DashboardComponent } from './components/routes/dashboard/dashboard.component';
 import { AgregarComponent } from './components/routes/agregar/agregar.component';
+import { MisSeriesComponent } from './components/routes/mis-series/mis-series.component';
+import { MisPelisComponent } from './components/routes/mis-pelis/mis-pelis.component';
 
 
 const routes: Routes = [
@@ -39,6 +41,12 @@ const routes: Routes = [
   },
   {
     path: 'agregar', component: AgregarComponent,
+  },
+  {
+    path: 'mis-series', component: MisSeriesComponent,
+  },
+  {
+    path: 'mis-pelis', component: MisPelisComponent,
   },
   {
     path: '',component: InicioComponent,

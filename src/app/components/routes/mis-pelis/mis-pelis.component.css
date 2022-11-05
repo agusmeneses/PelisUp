@@ -193,12 +193,7 @@ color: #EBEEF5;
     color: #FFAD49;
 
 }
-.footer{
-    
-    margin-top: 1400px;
-   
 
-}
 .container{
     margin-top: 350px;
 }
@@ -267,42 +262,13 @@ color: #EBEEF5;
     color: #FF6161;
 }
 
-.navigation{
+.spinner-border{
+    margin-left: 720px;
+    margin-top: 50px;
     position: absolute;
-    margin-top: 294px;
-    margin-left: 1019px;
 }
 
-.botonpag{
-    background: #4d41b6;
-    width: 130px;
-    height: 30px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    border-radius: 10px;
+.atras{
     border:none;
-}
-
-.botonpagno{
-    background: #4d41b6;
-    width: 130px;
-    height: 30px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #868686;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    border-radius: 10px;
-    border:none;
+    background: none;
 }

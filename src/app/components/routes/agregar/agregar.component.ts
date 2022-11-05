@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Input } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
-import { FirstWordPipe } from 'src/app/app.module';
 import { MoviesService } from 'src/app/services/movies.service';
 import { IMovie, IMovieUser } from 'src/app/interfaces/movies.interfaces';
 
@@ -30,6 +29,8 @@ export class AgregarComponent implements OnInit {
 
   userLocStg: any;
   userJSON: string | null = null;
+
+  cont_pag: number=1;
 
   
   
@@ -62,6 +63,34 @@ export class AgregarComponent implements OnInit {
           console.log("Error",error);
         }
       )
+  }
+
+  IncrementarCont(){
+    this.cont_pag+=1
+    this.MoverPagina(this.cont_pag)
+  }
+
+  DecrementarCont(){
+    this.cont_pag-=1
+    this.MoverPagina(this.cont_pag)
+  }
+
+  MoverPagina(numero: number){
+    this._moviesService.getTrending(numero).subscribe(
+      (response: any) => {
+        console.log("Se trajo peliculas de la API",response);
+
+        this.movieSeriesOrigRow = response.results
+        this.movieSeriesRow = response.results
+        this.cant=this.movieSeriesRow.length
+
+        this.getMyList(this.myMovies, 'tv');
+        this.getMyList(this.myMovies, 'movie');
+      },
+      error => {
+        console.log("Error",error);
+      }
+    )
   }
 
   AgregarMovieSerie(value: any, type: string){

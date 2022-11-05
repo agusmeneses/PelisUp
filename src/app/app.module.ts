@@ -13,7 +13,7 @@ import { IngresarComponent } from './components/routes/ingresar/ingresar.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AuthService } from './services/auth.service';
 import { RegistrarComponent } from './components/routes/registrar/registrar.component';
@@ -22,23 +22,8 @@ import { MoviedetailsComponent } from './components/routes/moviedetails/moviedet
 import { DashboardComponent } from './components/routes/dashboard/dashboard.component';
 import { ErrorComponent } from './components/routes/error/error.component';
 import { AgregarComponent } from './components/routes/agregar/agregar.component';
-import { Pipe, PipeTransform } from '@angular/core';
-
-
-@Pipe({
-  name: 'firstWord'
-})
-export class FirstWordPipe implements PipeTransform {
-
-  transform(value: string): string {
-    if (!value) { return ''; }
-    return value.split(' ')[0];
-  }
-
-}
-
-
-
+import { MisPelisComponent } from './components/routes/mis-pelis/mis-pelis.component';
+import { MisSeriesComponent } from './components/routes/mis-series/mis-series.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +37,9 @@ export class FirstWordPipe implements PipeTransform {
     MoviedetailsComponent,
     ErrorComponent,
     DashboardComponent,
-    AgregarComponent
+    AgregarComponent,
+    MisPelisComponent,
+    MisSeriesComponent
     
   ],
   imports: [

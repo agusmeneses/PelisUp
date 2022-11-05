@@ -9,7 +9,7 @@
 <img class="card" src="{{ urlImage + movie.poster_path}}" alt="">
 
 <div class="details">
-    <h1>{{movie.tagline}}</h1>
+    <h1>{{movie.tagline || movie.original_title}}</h1>
     <h2>{{movie.overview}}</h2>
     <div class="rating">
         <img width="13.5" height="13.5" src="assets/star.png" alt="">
@@ -24,7 +24,7 @@
         <h3>Duration</h3>
         <h4>{{movie.runtime}} min</h4>
         <h3>Genres</h3>
-        <h4>{{movie.genres[0].name}}</h4>
+        <h4>{{genre}}</h4>
         <br>
         <br>
         <br>
