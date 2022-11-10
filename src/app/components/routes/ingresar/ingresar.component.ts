@@ -27,7 +27,6 @@ export class IngresarComponent implements OnInit {
         console.log(response);
         if (response){
           console.log("Esta logueado")
-          window.location.href="/dash/"
         }else{
           console.log("No esta logueado")
         }

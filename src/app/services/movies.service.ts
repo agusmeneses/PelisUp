@@ -25,6 +25,8 @@ export class MoviesService {
         ;}
     };
 
+    
+
     public deleteMovieSerie(uid: string, id: string, type: string){
         if (type=='tv')
             {return this.firestore.collection('usuarios').doc(uid).collection('tv')

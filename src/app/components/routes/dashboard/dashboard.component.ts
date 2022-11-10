@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit {
   myMovies: any[] = [];
   cont_movies: number = 0;
   cont_series: number = 0;
+  loaded: boolean = false;
 
 
   constructor(public authService: AuthService, public _moviesService: MoviesService) { }
@@ -76,7 +77,8 @@ export class DashboardComponent implements OnInit {
             });
           });
           console.log(array.length)
-          return (this.cont_movies=array.length)
+          return (this.cont_movies=array.length,
+            this.loaded=true)
 
 
         },
